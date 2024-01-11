@@ -19,7 +19,7 @@ function ToyForm({addNewToy}) {
 
     let newToy = {image, name, likes}
     
-    fetch('http://localhost:3001/toys', {
+    fetch('http://localhost:4000/toys', {
     method: 'POST', 
     headers: {'Content-Type' : 'Application/json'
     },

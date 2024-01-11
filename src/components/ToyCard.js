@@ -8,7 +8,7 @@ function ToyCard({ id, name, image, likes, deleteToy }) {
     setLocalLikes(localLikes + 1);
 
     // Send a PATCH request to update the likes on the server
-    fetch(`http://localhost:3001/toys/${id}`, {
+    fetch(`http://localhost:4000/toys/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +30,7 @@ function ToyCard({ id, name, image, likes, deleteToy }) {
   function handleDelete() {
     deleteToy(toy);
 
-    fetch(`http://localhost:3001/toys/${id}`, {
+    fetch(`http://localhost:4000/toys/${id}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
     })

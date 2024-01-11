@@ -9,7 +9,7 @@ function App() {
   const [toys, setToys] = useState([])
 
   useEffect(()=> {
-    fetch('http://localhost:3001/toys')
+    fetch('http://localhost:4000/toys')
     .then(r=>r.json())
     .then(toys => {console.log(toys);setToys(toys)})
   }, [setToys])
